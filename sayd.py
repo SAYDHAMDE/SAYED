@@ -7,7 +7,7 @@ except ModuleNotFoundError as x:
 	os.system(f'pip install {m}')
 from concurrent.futures import ThreadPoolExecutor as kil
 
-Id,token = input('\033[2;36m- Enter ID Telegram ~ ادخل ايديك تلجرام : \033[1;97m'),input('\033[2;36m- Enter Token BOT Telegram ~ ادخل توكن البوت : \033[1;97m')
+Id,token = input('\033[2;36m- Enter ID Telegram ~ ادخل زوبر : \033[1;97m'),input('\033[2;36m- Enter Token BOT Telegram ~ ادخل توكن البوت : \033[1;97m')
 kopo = requests.get('https://api.telegram.org/bot' + str(token) + '/sendMessage?chat_id=' + str(Id) + '&text=' + str('- Tool Run • تم تشغيل الاداة '))
 webbrowser.open('https://t.me/Pythonln')
 if kopo.status_code == 404:
