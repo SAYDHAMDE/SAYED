@@ -38,7 +38,7 @@ z,total,ok,cp=0,0,0,0
 
 def get(user):
 	try:
-		url = requests.get('https://graph.facebook.com/{}'.format(user),params={'access_token': 'EAABwzLixnjYBO8aDgnZCXTXnwv91swARorjXxPtRfKOrqGejLbbgd6SXDN5RzrysOqQavJjCIrvPZB0FFCMJdZCJHUec6ZA8e7qQhLFodPKlJr9CXwb8MHZCzISXi4od26Ky1HNk6P1CpOBX6vgNY16JZB7CpfcEdoYDRTgmdZCWWWvhLdy53eCoZBuBtQBhUbQw3jgZD','fields': "friends"},headers={"user-agent": user_agent.generate_user_agent()},cookies={'cookies':'datr=RrTzZpNshGolwgHqnuREuNhH; sb=RrTzZnZguHLVOlO4ERtwGDGo; m_pixel_ratio=2.75; locale=ar_AR; wd=393x766; c_user=61552550417215; fr=0cvVo1MNU1hHB61jg.AWX4anul0Upl8uirZXIXmcBEgxY.Bm87RG..AAA.0.0.Bm87Rj.AWW8awm1zss; xs=13%3AV_AtgbaaY20ERw%3A2%3A1727247461%3A-1%3A-1; m_page_voice=61552550417215'}).json()
+		url = requests.get('https://graph.facebook.com/{}'.format(user),params={'access_token': 'EAABwzLixnjYBOwZAhTMBAQU5i6ZCiLD6i5QoBoG6sd9tqFw7fmNZAkzIzyyn1AhLVGRZAIAEGdQch6qvrKgeC77TkeEVRmp0QZC9TZCjROLmBZAMBJMEtsBGGU8pUf0rWdHoZChmWrAZCPO7FJYWAFfXVbr4d0UTZBIdmKao9ZAzCIOVN0mau1ox4IH3ysOkCZCzp0eN0nJi9QBbFD5I','fields': "friends"},headers={"user-agent": user_agent.generate_user_agent()},cookies={'cookies':'datr=b7fzZhcKzDRyTEHzqA02mExD; sb=b7fzZvqtnNMZX6b-JBYB92lN; m_pixel_ratio=2.75; wd=377x640; c_user=100078830843196; fr=0qvYK6ZDMPZG8tZNi.AWUahesuswS_8BBf6pS-z5LvCXY.Bm87dv..AAA.0.0.Bm871z.AWUL0N-4RGo; xs=6%3AlwAsYjNDtYkWGA%3A2%3A1727249779%3A-1%3A6642; locale=ar_AR; fbl_st=100738281%3BT%3A28787496; wl_cbv=v2%3Bclient_version%3A2630%3Btimestamp%3A1727249783; vpd=v1%3B640x377x2.75'}).json()
 		for mm in url['friends']['data']:
 			ko = (mm['id']+'|'+mm['name'])
 			if ko in fid:
